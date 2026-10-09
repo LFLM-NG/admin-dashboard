@@ -1,11 +1,87 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-</body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="header">
+        <div class="header-top">
+          <div class="search-bar">
+            <label for="search"><img src="" alt="" /></label>
+            <input type="text" id="search" name="search" />
+          </div>
+          <div class="user-info"></div>
+        </div>
+        <div class="header-bottom">
+          <div class="user-greetings">
+            <img src="" alt="" />
+            <div class="user-greetings-text"></div>
+          </div>
+          <div class="button-containers">
+            <button></button><button></button><button></button>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar">
+        <div class="dashboard">
+          <img src="/images/view-dashboard.svg" alt="dashboard-icon" /><span
+            >Dashboard</span
+          >
+        </div>
+        <div class="navigation">
+          <div class="navigation-item">
+            <img src="/images/home.svg" alt="home-icon" /><a href="">home</a>
+          </div>
+          <div class="navigation-item">
+            <img src="/images/card-account-details.svg" alt="profile-icon" /><a
+              href=""
+              >profile</a
+            >
+          </div>
+          <div class="navigation-item">
+            <img src="/images/message-reply.svg" alt="message-icon" /><a href=""
+              >messages</a
+            >
+          </div>
+          <div class="navigation-item">
+            <img
+              src="/images/clock-time-three-outline.svg"
+              alt="history-icon"
+            /><a href="">history</a>
+          </div>
+          <div class="navigation-item">
+            <img src="/images/note-multiple.svg" alt="task-icon" /><a href=""
+              >tasks</a
+            >
+          </div>
+          <div class="navigation-item">
+            <img src="/images/account-group.svg" alt="communities-icon" /><a
+              href=""
+              >communities</a
+            >
+          </div>
+          <div class="navigation-item">
+            <img src="/images/cog.svg" alt="settings-icon" /><a href=""
+              >settings</a
+            >
+          </div>
+          <div class="navigation-item">
+            <img src="/images/help-box.svg" alt="support-icon" /><a href=""
+              >support</a
+            >
+          </div>
+          <div class="navigation-item">
+            <img src="/images/shield-check.svg" alt="privacy-icon" /><a href=""
+              >privacy</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="content-container"></div>
+    </div>
+  </body>
 </html>
