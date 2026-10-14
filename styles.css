@@ -1,10 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+    font-family: 'Roboto', sans-serif;
+    --sidebar-color: #0096d2;
+    --button-color-active: #0096d2bf;
+    --content-color: #dfdfdf;
+    --whitespace-color: #fff;
+    --project-card-tag-color: #ffa500;
+    --description-text-color: #6b6b6b;
+    --user-icon-size: 3rem;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: 'Roboto', sans-serif;
 }
 
 .grid-container {
@@ -14,6 +24,8 @@
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 4fr;
 }
+
+/* Header Section */
 
 .header {
     display: grid;
@@ -47,7 +59,7 @@
     height: 1.5rem;
     border-radius: 25px;
     border: none;
-    background-color: #d3d3d3;
+    background-color: var(--content-color);
 }
 
 .header-bottom h1 {
@@ -63,23 +75,25 @@
     height: 2rem;
     border-radius: 25px;
     border: none;
-    background-color: rgb(0, 150, 210);
-    color: #fff;
+    background-color: var(--sidebar-color);
+    color: var(--whitespace-color);
     font-weight: bold;
 }
 
 .button-container button:active {
-    background-color: rgba(0, 150, 210, 0.75);
+    background-color: var(--button-color-active);
 }
+
+/* Navigation Sidebar Section */
 
 .sidebar {
     padding: 1rem 1rem;
     grid-row: 1 / -1;
     display: flex;
     flex-direction: column;
-    background-color: rgb(0, 150, 210);
+    background-color: var(--sidebar-color);
     text-transform: capitalize;
-    color: #fff;
+    color: var(--whitespace-color);
     font-weight: bold;
     align-items: flex-start;
     justify-content: flex-start;
@@ -107,8 +121,14 @@
     margin-left: 0.5rem;
 }
 
+.navigation-item:nth-child(7) {
+    margin-top: 2rem;
+}
+
+/* Main Content Section */
+
 .main-content {
-    background-color: #d3d3d3;
+    background-color: var(--content-color);
     box-shadow: inset 0 0.5rem 1rem -1rem;
     padding: 2rem 2rem 3rem 1.5rem;
     display: grid;
@@ -133,7 +153,7 @@
 }
 
 .project-card {
-    border-left: 1rem solid #ffa500;
+    border-left: 1rem solid var(--project-card-tag-color);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -141,7 +161,7 @@
 
 .project-card p, .announcement-container p {
     margin-top: 0.1rem;
-    color: #6b6b6b;
+    color: var(--description-text-color);
 }
 
 .project-icons {
@@ -162,7 +182,7 @@
 
 .announcement-card:nth-child(n+2) {
     padding-top: 1rem;
-    border-top: 1px solid #000;
+    border-top: 1px solid var(--description-text-color);
 }
 
 .trending {
@@ -188,17 +208,16 @@
 .project-card, .announcement-container, .trending-container {
     padding: 2rem;
     box-shadow: 0.5rem 0.5rem 1rem -1rem;
-    background-color: #fff;
+    background-color: var(--whitespace-color);
     border-radius: 1rem;
 }
-    
-.navigation-item:nth-child(7) {
-    margin-top: 2rem;
-}
+
+/* Icon Styling */
 
 .dashboard img{
     width: 3rem;
 }
+
 .navigation-item img, .header img, .project-icons img{
     width: 1.5rem;
 }
@@ -206,11 +225,11 @@
 img.user-icon-top, img.user-icon-bottom, .trending-card img {
     padding: 0.5rem;
     border-radius: 50%;
-    background-color: #d3d3d3;
+    background-color: var(--content-color);
 }
 
 img.user-icon-top, .trending-card img {
-    width: 3rem;
+    width: var(--user-icon-size);
 }
 
 img.user-icon-bottom {
